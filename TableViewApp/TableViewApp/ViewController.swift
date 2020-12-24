@@ -27,12 +27,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     } // число строк необходимое для работы с таблицей
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")
-        cell?.textLabel?.text = names[indexPath.row]
-        cell?.imageView?.image = UIImage(named: names[indexPath.row])
-        cell?.imageView?.layer.cornerRadius = cell!.frame.size.height / 2
-        cell?.imageView?.clipsToBounds = true
-        return cell!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! CustomTableViewCell
+        cell.nameLabel?.text = names[indexPath.row]
+        cell.imageOfPlace?.image = UIImage(named: names[indexPath.row])
+        cell.imageOfPlace?.layer.cornerRadius = cell.imageOfPlace.frame.size.height / 2
+        cell.imageOfPlace?.clipsToBounds = true
+        return cell
     } // метод для работы с контентом ячейки
     
 // MARK: - Table view delegate

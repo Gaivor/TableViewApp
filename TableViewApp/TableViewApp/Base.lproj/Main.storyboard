@@ -16,26 +16,73 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZOt-NN-vea">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZOt-NN-vea">
                                 <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="uYh-0K-WlB" style="IBUITableViewCellStyleDefault" id="q4G-pL-bJe">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="q4G-pL-bJe" customClass="CustomTableViewCell" customModule="TableViewApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="q4G-pL-bJe" id="yXo-3o-CUv">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uYh-0K-WlB">
-                                                    <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="N7Z-XO-NDv">
+                                                    <rect key="frame" x="15" y="7.5" width="65" height="65"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="65" id="3YP-xj-d9k"/>
+                                                        <constraint firstAttribute="height" constant="65" id="6Fx-VQ-Y0V"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ex4-jL-8MD">
+                                                    <rect key="frame" x="95" y="8" width="304" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="JRy-Wh-GOK"/>
+                                                        <constraint firstAttribute="height" constant="25" id="ibu-Sx-fT0"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Kw-mh-Mxe">
+                                                    <rect key="frame" x="95" y="30" width="305" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="TQs-lI-gll"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWO-3y-Mia">
+                                                    <rect key="frame" x="95" y="51" width="305" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="udx-jq-bJ3"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="13"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="N7Z-XO-NDv" firstAttribute="leading" secondItem="yXo-3o-CUv" secondAttribute="leading" constant="15" id="EXM-aR-lUu"/>
+                                                <constraint firstAttribute="trailing" secondItem="ex4-jL-8MD" secondAttribute="trailing" constant="15" id="G1C-AD-P54"/>
+                                                <constraint firstItem="ex4-jL-8MD" firstAttribute="leading" secondItem="N7Z-XO-NDv" secondAttribute="trailing" constant="15" id="NOG-uS-RAT"/>
+                                                <constraint firstAttribute="trailing" secondItem="aWO-3y-Mia" secondAttribute="trailing" constant="14" id="Qe0-mM-x3O"/>
+                                                <constraint firstAttribute="bottom" secondItem="aWO-3y-Mia" secondAttribute="bottom" constant="8" id="TR2-2K-hZE"/>
+                                                <constraint firstAttribute="trailing" secondItem="7Kw-mh-Mxe" secondAttribute="trailing" constant="14" id="Y6Y-28-mVP"/>
+                                                <constraint firstItem="ex4-jL-8MD" firstAttribute="top" secondItem="yXo-3o-CUv" secondAttribute="top" constant="8" id="dAR-e5-NkY"/>
+                                                <constraint firstItem="7Kw-mh-Mxe" firstAttribute="top" secondItem="yXo-3o-CUv" secondAttribute="top" constant="30" id="f4n-H8-OAM"/>
+                                                <constraint firstItem="N7Z-XO-NDv" firstAttribute="centerY" secondItem="yXo-3o-CUv" secondAttribute="centerY" id="jmt-sz-zT5"/>
+                                                <constraint firstItem="aWO-3y-Mia" firstAttribute="leading" secondItem="N7Z-XO-NDv" secondAttribute="trailing" constant="15" id="s4h-ra-V3M"/>
+                                                <constraint firstItem="7Kw-mh-Mxe" firstAttribute="leading" secondItem="N7Z-XO-NDv" secondAttribute="trailing" constant="15" id="vao-3Q-Ugh"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imageOfPlace" destination="N7Z-XO-NDv" id="FZ5-D8-jsL"/>
+                                            <outlet property="locationLabel" destination="7Kw-mh-Mxe" id="XTA-8w-oJV"/>
+                                            <outlet property="nameLabel" destination="ex4-jL-8MD" id="JGY-uA-aqB"/>
+                                            <outlet property="typeLabel" destination="aWO-3y-Mia" id="ezE-BD-0gn"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
